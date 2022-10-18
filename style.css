@@ -1,0 +1,331 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+* {
+    margin: 0 0;
+}
+body {
+    background-color: rgb(39, 36, 36);
+}
+
+
+
+nav {
+    position: fixed;
+    background: #1b1b1b;
+    width: 100%;
+    padding: 10px 0;
+    z-index: 12;
+}
+
+nav .menu {
+    max-width: 1250px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+#logo {
+    width: 12%;
+    height: 12%px;
+}
+.menu .logo a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 35px;
+    font-weight: 600;
+    font-style: italic;
+    align-content: center;
+    margin: 0 2px;
+}
+/*...search bar...*/
+#searchform {
+    background-color: #fff;
+    width: 300px;
+    height: 44px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+#querysearch {
+    all: unset;
+    font: 16px system-ui;
+    color: #000;
+    height: 100%;
+    width: 100%;
+    padding: 6px 10px;
+}
+::placeholder {
+    color: rgb(83, 83, 83);
+    opacity: 0.7;
+}
+
+button {
+    all: unset;
+    cursor: pointer;
+    width: 44px;
+    height: 44px;
+}
+svg {
+    color: rgb(83, 83, 83);
+    fill: currentColor;
+    width: 25px;
+    height: 25px;
+    padding: 10px;
+}
+.menu ul {
+    display: inline-flex;
+}
+
+.menu ul li {
+    list-style: none;
+    margin-left: 7px;
+}
+
+.menu ul li:first-child {
+    margin-left: 0px;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 8px 15px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+.menu ul li a:hover {
+    background: #fff;
+    color: black;
+}
+
+.container {
+    min-height: 100vh;
+    background-color: rgb(110, 106, 106);
+    color: white;
+    font-family: 'Varela Round', sans-serif;
+    display: flex;
+    width: 75%;
+    padding: 34px;
+    float: right;
+    overflow-x: auto;
+
+}
+
+.sideBar {
+    position: fixed;
+    background-color: #000;
+    width: 20%;
+    height: 100vh;
+    color: darkgray;
+    float: left;
+    overflow-y: auto;
+}
+
+.sideBar ul {
+    align-items: center;
+    margin: 100px 23px;
+    padding-left: 24px;
+
+}
+
+.sideBar ul li {
+    list-style: none;
+    margin-left: 5%;
+    padding: 12px;
+
+}
+
+.sideBar ul li a {
+    color: rgb(126, 116, 116);
+    padding: 12px;
+    margin: 24px;
+    text-decoration: none;
+}
+
+.sideBar ul li a:hover {
+    color: rgb(252, 247, 247);
+}
+
+h1 {
+    font-family: sans-serif;
+    font-size: 22px;
+    padding: 60px 15px;
+}
+
+/*middle songs...*/
+
+
+.bottom {
+    position: sticky;
+    bottom: 0;
+    height: 110px;
+    background-color: rgb(20, 19, 19);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 80%;
+    float: right;
+}
+
+.icons {
+    margin-top: 40px;
+    
+}
+
+.icons i {
+    cursor: pointer;
+}
+
+#myProgressBar {
+    width: 55vw;
+    cursor: pointer;
+}
+
+.songItemContainer {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    font-size: small;
+
+}
+
+.songItem {
+    position: relative;
+    max-width: 100%;
+    height: 50%;
+    width: 17%;
+    margin: 12px;
+    background-color: rgb(29, 28, 28);
+    border-radius: 8px;
+    min-height: 32vh;
+    align-items: center;
+    
+}
+
+.songItemContainer img {
+    width: 80%;
+    height: 100%;
+    margin: 10px 10px 5px 10px;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 8px;
+}
+.timestamp {
+    margin: 0 23px;
+}
+
+.timestamp i {
+    cursor: pointer;
+}
+
+.songInfo {
+    position: absolute;
+    left: 13vw;
+    font-family: 'Varela Round', sans-serif;
+    margin-top: -0.8%;
+}
+
+.songInfo img {
+    opacity: 0;
+    transition: opacity 0.4s ease-in;
+}
+
+
+#masterSongName {
+    font-size: 12px;
+}
+/*.....*/
+
+.songlistplay{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .3s ease;
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    /* Black see-through */
+}
+
+.songItem:hover  .songlistplay {
+    opacity: 1;
+}
+.timestamp {
+    color: rgb(148, 144, 144);
+    font-size: 50px;
+    position: absolute;
+    top: 20%;
+    left: 38%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+}
+.fa-play:hover {
+    color: #eee;
+}
+/*....Range button.....*/
+   #muteButton{
+    margin: 0 0 0 550px;
+    display: flex;
+   }
+   #rangeValue{
+    margin: 0 0 0 570px;
+   }
+   
+.bottom .volume input[type="range"] {
+    -webkit-appearance:none !important;
+    display: flex;
+    width: 170px;
+    margin: -10px 0 0 570px;
+    height: 2px;
+    background: rgb(250, 248, 248);
+    border: none;
+    outline: none;
+    }
+    .bottom .volume input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none !important;
+    width: 12px;
+    height:12px;
+    background: rgb(243, 241, 241);
+    border: 2px solid black;
+    border-radius: 50%;
+    cursor: pointer;
+    }
+    .bottom.volume input[type="range"]::-webkit-slider-thumb:hover {
+    background: black;
+    color: rgb(253, 244, 244);
+    }
+    /*....bottom range..*/
+    .bottomRange input[type="range"] {
+        -webkit-appearance:none !important;
+        width: 170px;
+        height: 4px;
+        background: rgb(247, 244, 244);
+        border: none;
+        outline: none;
+        }
+        .bottomRange input[type="range"]::-webkit-slider-thumb {
+        -webkit-appearance: none !important;
+        width: 12px;
+        height:12px;
+        background: rgb(243, 241, 241);
+        border: 2px solid black;
+        border-radius: 50%;
+        cursor: pointer;
+        }
+        .bottomRange input[type="range"]::-webkit-slider-thumb:hover {
+        background: black;
+        color: #eee;
+        }
+   

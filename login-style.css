@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,500&display=swap');
+* {
+	box-sizing: border-box;
+}
+body {
+	background-color: #726f74;
+	font-family: 'Open Sans', sans-serif;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 100vh;
+	margin: 0;
+    background-image: radial-gradient(rgb(0, 0, 0), rgb(129, 129, 126));
+}
+
+.container_login {
+	background-color: rgb(129, 126, 126);
+	border-radius: 5px;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+	overflow: hidden;
+	width: 400px;
+	max-width: 100%;
+}
+
+.header {
+	border-bottom: 1px solid #f0f0f0;
+	background-color: #f7f7f7;
+	padding: 25px 40px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+ .btn-cancel {
+  /* margin-left:220px; */
+  padding: 12px 16px;
+  cursor: pointer;
+}
+.btn-cancel2 {
+	
+  /* margin-left:220px; */
+  padding: 12px 16px;
+  cursor: pointer;
+}
+.header h2 {
+	margin: 0;
+	font-size: large;
+}
+
+.form_login {
+	padding: 20px;	
+}
+
+.form-control {
+	margin-bottom: 10px;
+	padding-bottom: 10px;
+	position: relative;
+}
+
+.form-control label {
+	display: inline-block;
+	margin-bottom: 5px;
+}
+
+.form-control input {
+	border: 2px solid #f0f0f0;
+	border-radius: 4px;
+	display: block;
+	font-family: inherit;
+	font-size: 14px;
+	padding: 10px;
+	width: 100%;
+}
+
+.form_login button {
+	background-color: #1c191d;
+	border: 2px solid #f1edf3;
+	border-radius: 4px;
+	color: #fff;
+	display: block;
+	font-family: inherit;
+	font-size: 16px;
+	padding: 10px;
+	margin-top: 20px;
+	width: 100%;
+    cursor: pointer;
+}
+.sign-in {
+    color: rgb(248, 239, 239);
+    margin: 500px 0 0 50px;
+    text-align: center;
+}
+.sign-up {
+    color: rgb(252, 246, 246);
+    margin: 0 0 0 65px;
+}
