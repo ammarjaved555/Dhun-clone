@@ -1,8 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
 * {
     margin: 0 0;
 }
+
 body {
     background-color: rgb(39, 36, 36);
 }
@@ -25,10 +27,12 @@ nav .menu {
     justify-content: space-between;
     padding: 0 20px;
 }
+
 #logo {
     width: 12%;
     height: 12%px;
 }
+
 .menu .logo a {
     text-decoration: none;
     color: #fff;
@@ -38,6 +42,7 @@ nav .menu {
     align-content: center;
     margin: 0 2px;
 }
+
 /*...search bar...*/
 #searchform {
     background-color: #fff;
@@ -48,6 +53,7 @@ nav .menu {
     flex-direction: row;
     align-items: center;
 }
+
 #querysearch {
     all: unset;
     font: 16px system-ui;
@@ -56,6 +62,7 @@ nav .menu {
     width: 100%;
     padding: 6px 10px;
 }
+
 ::placeholder {
     color: rgb(83, 83, 83);
     opacity: 0.7;
@@ -67,6 +74,7 @@ button {
     width: 44px;
     height: 44px;
 }
+
 svg {
     color: rgb(83, 83, 83);
     fill: currentColor;
@@ -74,6 +82,7 @@ svg {
     height: 25px;
     padding: 10px;
 }
+
 .menu ul {
     display: inline-flex;
 }
@@ -122,7 +131,7 @@ svg {
     height: 100vh;
     color: darkgray;
     float: left;
-    overflow-y: auto;
+
 }
 
 .sideBar ul {
@@ -175,7 +184,7 @@ h1 {
 
 .icons {
     margin-top: 40px;
-    
+
 }
 
 .icons i {
@@ -205,7 +214,7 @@ h1 {
     border-radius: 8px;
     min-height: 32vh;
     align-items: center;
-    
+
 }
 
 .songItemContainer img {
@@ -216,6 +225,7 @@ h1 {
     cursor: pointer;
     border-radius: 8px;
 }
+
 .timestamp {
     margin: 0 23px;
 }
@@ -240,9 +250,10 @@ h1 {
 #masterSongName {
     font-size: 12px;
 }
+
 /*.....*/
 
-.songlistplay{
+.songlistplay {
     position: absolute;
     top: 0;
     bottom: 0;
@@ -258,9 +269,10 @@ h1 {
     /* Black see-through */
 }
 
-.songItem:hover  .songlistplay {
+.songItem:hover .songlistplay {
     opacity: 1;
 }
+
 .timestamp {
     color: rgb(148, 144, 144);
     font-size: 50px;
@@ -271,61 +283,334 @@ h1 {
     -ms-transform: translate(-50%, -50%);
     text-align: center;
 }
+
 .fa-play:hover {
     color: #eee;
 }
+
 /*....Range button.....*/
-   #muteButton{
+#muteButton {
     margin: 0 0 0 550px;
     display: flex;
-   }
-   #rangeValue{
+}
+
+#rangeValue {
     margin: 0 0 0 570px;
-   }
-   
+
+}
+
 .bottom .volume input[type="range"] {
-    -webkit-appearance:none !important;
+    -webkit-appearance: none !important;
     display: flex;
-    width: 170px;
+
     margin: -10px 0 0 570px;
     height: 2px;
     background: rgb(250, 248, 248);
     border: none;
     outline: none;
-    }
-    .bottom .volume input[type="range"]::-webkit-slider-thumb {
+    width: 10vw;
+}
+
+.bottom .volume input[type="range"]::-webkit-slider-thumb {
     -webkit-appearance: none !important;
     width: 12px;
-    height:12px;
+    height: 12px;
     background: rgb(243, 241, 241);
     border: 2px solid black;
     border-radius: 50%;
     cursor: pointer;
-    }
-    .bottom.volume input[type="range"]::-webkit-slider-thumb:hover {
+}
+
+.bottom.volume input[type="range"]::-webkit-slider-thumb:hover {
     background: black;
     color: rgb(253, 244, 244);
+}
+
+/*....bottom range..*/
+.bottomRange input[type="range"] {
+    -webkit-appearance: none !important;
+    width: 170px;
+    height: 4px;
+    background: rgb(247, 244, 244);
+    border: none;
+    outline: none;
+}
+
+.bottomRange input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none !important;
+    width: 12px;
+    height: 12px;
+    background: rgb(243, 241, 241);
+    border: 2px solid black;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.bottomRange input[type="range"]::-webkit-slider-thumb:hover {
+    background: black;
+    color: #eee;
+}
+
+@media only screen and (max-width : 1297px) and (min-width : 1024px) {
+    body {}
+
+    .container {}
+
+    .sideBar {
+        height: 120vh;
     }
-    /*....bottom range..*/
-    .bottomRange input[type="range"] {
-        -webkit-appearance:none !important;
-        width: 170px;
-        height: 4px;
-        background: rgb(247, 244, 244);
-        border: none;
-        outline: none;
-        }
-        .bottomRange input[type="range"]::-webkit-slider-thumb {
-        -webkit-appearance: none !important;
-        width: 12px;
-        height:12px;
-        background: rgb(243, 241, 241);
-        border: 2px solid black;
-        border-radius: 50%;
-        cursor: pointer;
-        }
-        .bottomRange input[type="range"]::-webkit-slider-thumb:hover {
-        background: black;
-        color: #eee;
-        }
+    .sideBar ul li a {
+        margin-left:-30px;
+        
+    }
+
+    .songItem {
+        min-height: 28vh;
+
+    }
+    .timestamp {
+        font-size: 40px;
+        left: 33%;
+    }
+    
+    .volume {
+        margin-left: -570px;
+        width: 10vw;
+    }
+
+    #muteButton {
+        margin-left: -20px;
+
+    }
+
+}
+
+@media only screen and (max-width : 1024px) and (min-width : 900px) {
+    .songItem {
+        min-height: 27vh;
+    }
+    .sideBar ul li a {
+        margin-left:-30px;
+        
+    }
+
+    .songName {
+        font-size: small;
+    }
+    .timestamp {
+        font-size: 35px;
+        left: 31%;
+    }
+    .volume {
+        margin-left: -570px;
+
+    }
+
+    #muteButton {
+        margin-left: -20px;
+
+    }
+}
+
+@media only screen and (max-width : 900px) and (min-width :768px) {
+    .songItem {
+        min-height: 25vh;
+
+    }
+    .sideBar ul li a {
+        margin-left:-30px;
+        
+    }
+
+    .songName {
+        font-size: small;
+    }
+    .timestamp {
+        font-size: 30px;
+        left: 29%;
+    }
+    .volume {
+        margin-left: -570px;
+
+    }
+
+    #muteButton {
+        margin-left: -20px;
+
+    }
+}
+
+@media only screen and (max-width : 768px) and (min-width :620px) {
+    .songItem {
+        min-height: 21vh;
+
+    }
+    .sideBar ul li a {
+        font-size: small;
+        margin-left:-50px;
+        
+    }
+
+    .songName {
+        font-size: 8px;
+    }
+    .timestamp {
+        font-size: 27px;
+        left: 25%;
+    }
+    #masterSongName {
+        font-size: 8px;
+    }
+
+    .volume {
+        margin-left: -570px;
+
+    }
+
+    #muteButton {
+        margin-left: -20px;
+
+    }
+
+    #masterSongName {
+        font-size: 8px;
+    }
+}
+
+@media only screen and (max-width : 620px) and (min-width :480px) {
+    #logo {
+        width: 8%;
+        height: 8%px;
+    }
+    
+    .menu .logo a {
+       font-size: medium;
+    }
+    .menu ul li a {
+        font-size: medium;
+    }
+    #searchform {
+       
+        width: 150px;
+        height: 30px;
+    }
    
+    .sideBar ul li a {
+        font-size: x-small;
+        margin-left:-50px;
+        
+    }
+   
+    .songItem {
+        min-height: 19vh;
+        margin: 10px;
+
+    }
+    .songItemContainer img {
+        margin-left: 6px;   
+    }
+    .timestamp {
+        font-size: 22px;
+        left: 13%;
+    }
+    .songName {
+        font-size: 8px;
+    }
+
+    #masterSongName {
+        font-size: 8px;
+    }
+
+    .volume {
+        margin-left: -570px;
+
+    }
+
+    #muteButton {
+        margin-left: -20px;
+
+    }
+}
+
+@media only screen and (max-width : 480px) and (min-width :320px) {
+   
+   
+#logo {
+    width: 6%;
+    height: 6%px;
+}
+
+.menu .logo a {
+   font-size: medium;
+}
+.menu ul li a {
+    font-size: small;
+}
+   
+    #searchform {
+       
+        width: 130px;
+        height: 30px;
+    }
+    .sideBar ul li a {
+        font-size: x-small;
+        margin-left:-50px;
+        
+    }
+    h1 {
+        
+        font-size: 15px;
+      margin-left: 20px;
+      padding-top: 30px ;
+      padding-bottom: 10px;
+    }
+    .songItem {
+        min-height: 18vh;
+        margin-left: 25px;
+        width: 50px;
+    }
+    .songItemContainer img {
+        margin-left: 6px;
+        margin-bottom: -5px;
+        
+    }
+    #masterSongName {
+        font-size: xx-small;
+    }
+    .timestamp {
+        font-size: 18px;
+        left: 5%;
+    }
+    .songName {
+        font-size: 7px;
+    }
+
+    #masterSongName {
+        font-size: 8px;
+    }
+
+    .volume {
+        margin-left: -570px;
+
+    }
+
+    #muteButton {
+        margin-left: -20px;
+
+    }
+}
+
+@media only screen and (max-width : 320px) {
+    #masterSongName {
+        font-size: 8px;
+    }
+    .volume {
+        margin-left: -570px;
+
+    }
+
+    #muteButton {
+        margin-left: -20px;
+
+    }
+}
